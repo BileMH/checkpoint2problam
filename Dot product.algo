@@ -1,0 +1,27 @@
+ALGORITHM Dot product
+VAR
+v1,v2 : ARRAY_OF INTEGER[50];
+dot : INTEGER;
+BEGIN
+PROCEDURE dot_product(v1,v2 :ARRAY_OF INTEGER, VAR dot: INTEGER)
+VAR
+i : INTEGER;
+BEGIN
+    dot :=0;
+    i:=0;
+    IF (v1.length <> v2.length) THEN
+        write ("vectorswith different sizes we cannot calculat dot product");
+        dot := 0
+    END_IF
+END
+n1:=read_size();
+read_array(n1,v1);
+n2:=read_size();
+read_array(n2,v2);
+dot_product(v1,v2,dot);
+IF 
+write ("v1 and v2 are orthogonal");
+else
+write("v1 and v2 are not arthogonal");
+END_IF
+END
