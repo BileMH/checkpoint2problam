@@ -12,7 +12,7 @@ BEGIN
     UNTIL tab1[i]=0 or set2[j]=0;
         FOR i FROM 0 TO LENGTH tab1[i]  DO
         FOR j FROM 0 TO LENGTH tab2[j]  DO
-            som:=tab1+tab2;
+            som:=tab1[i]+tab2[j];
         END_FOR
         write (som);
 END
